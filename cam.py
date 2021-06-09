@@ -5,7 +5,7 @@ from PIL import Image
 
 st.markdown('# カメラアプリ')
 
-flg = 0
+flg = 1
 
 radio = st.radio(
     'text',
@@ -17,12 +17,12 @@ if radio == 'run':
 elif radio == 'stop':
     flg = 1
 
-# device = user_input = st.text_input('input your video/camera device', '0')
-# if device.isnumeric():
-    # device = int(device)
-# cap = cv2.VideoCapture(device)
+device = user_input = st.text_input('input your video/camera device', '0')
+if device.isnumeric():
+    device = int(device)
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(device)
+# cap = cv2.VideoCapture(0)
 
 image_loc = st.empty()
 
