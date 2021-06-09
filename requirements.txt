@@ -1,3 +1,3 @@
 streamlit
 Pillow
-opencv-contrib-python
+cv2
